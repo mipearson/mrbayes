@@ -1,2 +1,5 @@
 *.o
 mb
+gmon.out
+primates.nex.*
+Saturn*

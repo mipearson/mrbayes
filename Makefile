@@ -15,7 +15,7 @@ MPI ?= no
 
 DEBUG ?= no
 #OPTFLAGS = -O2 -march=pentium4 -mfpmath=sse -fomit-frame-pointers
-OPTFLAGS ?= -O3
+OPTFLAGS = -g -m32 -finstrument-functions -O2
 
 # set compiler for the non-MPI version (mpicc will be used for the MPI
 # version regardless of this setting)
@@ -65,7 +65,7 @@ endif
 
 CFLAGS   +=   -Wall 
 
-LIBS     +=   -lm
+LIBS     +=   -lm -lsaturn
 
 LDFLAGS  =   $(CFLAGS)
 LDLIBS   =   $(LIBS)
